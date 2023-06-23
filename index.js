@@ -32,6 +32,10 @@ app.use("/transaction", transactionRoutes);
 /* MONGOOSE SETUP */
 const PORT = process.env.PORT || 9000;
 
+app.get("/", (req, res) => {
+  res.send("Express on Vercel");
+});
+
 mongoose
   .connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
